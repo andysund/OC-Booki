@@ -1,9 +1,10 @@
 
 /****** General ***********/
 
-html, body{ 
-    margin-left: 25px;
-    margin-right: 25px;
+html, body{
+    display: flex;
+    justify-content: center;
+
     padding: 0;
     height:100%;
     overflow-x: hidden;
@@ -79,12 +80,14 @@ html, body{
     display: flex;
     height: 163px;
     gap: 178px;
+    justify-content: space-between;
     
 }
 
 .main-container {
     max-width: 1440px;
-    margin : 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 .logo {
     margin-right: auto;
@@ -281,6 +284,7 @@ a:hover {
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
+ 
 }
 
 .filtre_list{
@@ -337,9 +341,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    min-height: 614px;
-    max-width: 871px;
-    width: 100%;
+    width: 70%;
 }
 .hebergements-title {
     display: flex;
@@ -360,16 +362,19 @@ a:hover {
     flex-direction: row;
     flex-wrap: wrap;
     min-height: 207px;
-    max-width: 250px;
     width: 100%;
     height: 100%;
-   
+    max-width: 250px;
+   padding: 0;
+   padding-bottom: 15px;
 }
 
 .hebergements-cards a {
     color: inherit;
     text-decoration: none;
     height: fit-content;
+    display: flex;
+    justify-content: center;
    
 }
 
@@ -386,6 +391,8 @@ a:hover {
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
+    min-height: 105px; 
+    width: 100%;
 }
 
 .hebergements-cards .card-title {
@@ -404,11 +411,10 @@ a:hover {
 }
 
 .hebergements-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 50px 30px;
-    margin: 0; 
-    
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 30px;
 }
 
 .btn__show-more {
@@ -431,9 +437,7 @@ a:hover {
     background-color: var(--main-bg-color);
     width: 33%;
     position: relative;
-    min-height: 614px;
-    max-width: 429px;
-    width: 100%;
+  
 }
 
 .populaires-title {
@@ -441,20 +445,18 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
-    max-width: 369px;
     width: 100%;
 }
 .populaires-cards {
-    max-width: 369px;
+   height: 100%;
     width: 100%;
 }
 
 .populaires-cards .card {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     margin-bottom: 30px;
-    max-width: 369px;
+    max-width: 379px;
     width: 100%;
 }
 
@@ -466,12 +468,13 @@ a:hover {
 }
 
 .populaires-cards .card-content {
-    width: 67%;
+    width: 100%;
     padding-left: 15px;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    flex-direction: column;
     box-sizing: border-box;
+
 }
 
 .populaires-cards .card-title {
@@ -496,12 +499,14 @@ a:hover {
 
 .section-activites{
     margin-top: 30px;
+    display: flex;
 }
 .activites {
     display: flex;
     flex-direction: row;
     gap:30px;
     padding: 30px;
+    width: 100%;
 
 }
 
@@ -592,6 +597,10 @@ a:hover {
 @media (max-width: 1023px) {
 
  /****** cards 1023px ***********/
+ .main-container {
+    margin-left: 50px;
+    margin-right: 50px;
+ }
 
  .hebergements-and-populaires {
         flex-direction: column;
@@ -602,6 +611,13 @@ a:hover {
  .hebergements {
         width: 100%;
         min-height: 612px;
+    }
+.hebergements-cards {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 30px;
+        justify-content: space-between;
+     
     }
 
 .filtres{
@@ -827,6 +843,7 @@ html, body{
         height: 208px;
         display: flex;
         min-width: 335px;
+        max-width: 100%;
     }
 .hebergements-cards img {
         height: 124px;
@@ -911,7 +928,7 @@ h2 {
 }
 .activites .cards {
     height: 200px;
-    min-width: 315px;
+    max-width: 100%;
     }
 
 .btn__show-more{
